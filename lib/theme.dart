@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 abstract class AppColors {
   static const secondary = Color(0xFFa085ff);
+  //static const accent = Color(0xFFD6755B);
   static const accent = Color(0xFFD6755B);
   static const textDark = Color(0xFF53585A);
   static const textLigth = Color(0xFFF5F5F5);
@@ -15,12 +16,12 @@ abstract class AppColors {
   static const cardDark = Color(0xFF303334);
 }
 
-abstract class _LightColors {
+abstract class LightColors {
   static const background = Colors.white;
   static const card = AppColors.cardLight;
 }
 
-abstract class _DarkColors {
+abstract class DarkColors {
   static const background = Color(0xFF1d1c25);
   static const card = AppColors.cardDark;
 }
@@ -30,8 +31,8 @@ class AppTheme {
   static const accentColor = AppColors.accent;
   static final visualDensity = VisualDensity.adaptivePlatformDensity;
 
-  final darkBase = ThemeData.dark();
-  final lightBase = ThemeData.light();
+  static ThemeData darkBase = ThemeData.dark();
+  static ThemeData lightBase = ThemeData.light();
 
   /// Light theme and its settings.
   ThemeData get light => ThemeData(
@@ -40,7 +41,7 @@ class AppTheme {
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.mulishTextTheme().apply(bodyColor: AppColors.textDark),
-        backgroundColor: _LightColors.background,
+        backgroundColor: LightColors.background,
         appBarTheme: lightBase.appBarTheme.copyWith(
           iconTheme: lightBase.iconTheme,
           backgroundColor: Colors.transparent,
@@ -53,11 +54,11 @@ class AppTheme {
           ),
           systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
-        scaffoldBackgroundColor: _LightColors.background,
+        scaffoldBackgroundColor: LightColors.background,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(primary: AppColors.secondary),
         ),
-        cardColor: _LightColors.card,
+        cardColor: LightColors.card,
         primaryTextTheme: const TextTheme(
           headline6: TextStyle(color: AppColors.textDark),
         ),
@@ -71,9 +72,9 @@ class AppTheme {
         visualDensity: visualDensity,
         textTheme:
             GoogleFonts.interTextTheme().apply(bodyColor: AppColors.textLigth),
-        backgroundColor: _DarkColors.background,
+        backgroundColor: DarkColors.background,
         appBarTheme: darkBase.appBarTheme.copyWith(
-          backgroundColor: Colors.transparent,
+          backgroundColor: DarkColors.background,
           elevation: 0,
           centerTitle: true,
           titleTextStyle: const TextStyle(
@@ -82,11 +83,11 @@ class AppTheme {
           ),
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
-        scaffoldBackgroundColor: _DarkColors.background,
+        scaffoldBackgroundColor: DarkColors.background,
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(primary: AppColors.secondary),
         ),
-        cardColor: _DarkColors.card,
+        cardColor: DarkColors.card,
         primaryTextTheme: const TextTheme(
           headline6: TextStyle(color: AppColors.textLigth),
         ),
