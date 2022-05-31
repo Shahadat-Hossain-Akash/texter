@@ -28,16 +28,17 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         //colorScheme: darkBase.colorScheme.copyWith(secondary: accentColor),
         visualDensity: visualDensity,
+
         textTheme:
-            GoogleFonts.interTextTheme().apply(bodyColor: AppColors.textLigth),
+            GoogleFonts.nunitoTextTheme().apply(bodyColor: AppColors.textLigth),
         backgroundColor: DarkColors.background,
         appBarTheme: darkBase.appBarTheme.copyWith(
           backgroundColor: DarkColors.background,
           elevation: 0,
           centerTitle: true,
-          titleTextStyle: const TextStyle(
+          titleTextStyle: TextStyle(
             fontWeight: FontWeight.bold,
-            fontSize: 17,
+            fontSize: 16,
           ),
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
