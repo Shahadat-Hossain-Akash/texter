@@ -4,11 +4,13 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:texter/helpers.dart';
 import 'package:texter/pages/calls_page.dart';
 import 'package:texter/pages/contacts_page.dart';
 import 'package:texter/pages/messages_page.dart';
 import 'package:texter/pages/notifications_page.dart';
 import 'package:texter/theme.dart';
+import '../widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -52,6 +54,23 @@ class HomeScreen extends StatelessWidget {
             );
           },
         ),
+        leadingWidth: 64,
+        leading: Align(
+          alignment: Alignment.centerRight,
+          child: IconBackground(
+            icon: Icons.search_rounded,
+            colors: AppColors.secondary.withOpacity(.75),
+            onTap: () {},
+          ),
+        ),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(
+              right: 34,
+            ),
+            child: Avatar.small(url: Helpers.randomPictureUrl()),
+          )
+        ],
       ),
       body: ValueListenableBuilder(
         valueListenable: pageIndex,

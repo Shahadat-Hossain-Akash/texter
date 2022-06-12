@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Texter, Text it',
       theme: ThemeData(
         brightness: Brightness.dark,
         //colorScheme: darkBase.colorScheme.copyWith(secondary: accentColor),
