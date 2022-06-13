@@ -31,15 +31,12 @@ class MyApp extends StatelessWidget {
 
         textTheme:
             GoogleFonts.nunitoTextTheme().apply(bodyColor: AppColors.textLigth),
+
         backgroundColor: DarkColors.background,
         appBarTheme: darkBase.appBarTheme.copyWith(
           backgroundColor: DarkColors.background,
           elevation: 0,
           centerTitle: true,
-          titleTextStyle: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-          ),
           systemOverlayStyle: SystemUiOverlayStyle.light,
         ),
         scaffoldBackgroundColor: DarkColors.background,
@@ -47,9 +44,6 @@ class MyApp extends StatelessWidget {
           style: ElevatedButton.styleFrom(primary: AppColors.secondary),
         ),
         cardColor: DarkColors.card,
-        primaryTextTheme: const TextTheme(
-          headline6: TextStyle(color: AppColors.textLigth),
-        ),
         iconTheme: const IconThemeData(color: AppColors.iconLight),
       ),
       home: HomeScreen(),
