@@ -143,6 +143,7 @@ class _BottomNavigationBarState extends State<BottomNavigationBar> {
                 padding: const EdgeInsets.all(16),
                 child: GlowingActionButton(
                     color: AppColors.secondary,
+                    size: 64,
                     icon: Icons.add,
                     onPressed: () {}),
               ),
